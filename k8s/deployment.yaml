@@ -16,7 +16,7 @@ spec:
       - name: weatherforecast
         image: fong62/weatherforecast:${BUILD_ID}
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Exists"
