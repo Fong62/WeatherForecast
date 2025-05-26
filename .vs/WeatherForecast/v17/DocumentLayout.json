@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\WeatherForecast\\",
-  "Documents": [],
+  "WorkspaceRootPath": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\WeatherForecast\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\weatherforecast\\weatherforecast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|solutionrelative:weatherforecast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Program.cs",
+              "RelativeDocumentMoniker": "WeatherForecast\\Program.cs",
+              "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Program.cs",
+              "RelativeToolTip": "WeatherForecast\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:00:20.542Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
