@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/Fong62/QLThuVienMVC.git', 
+                git url: 'https://github.com/Fong62/WeatherForecast.git', 
                      branch: 'main',
                      credentialsId: 'github-credentials'
             }
