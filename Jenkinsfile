@@ -59,7 +59,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
@@ -71,14 +71,8 @@ pipeline {
                    	--no-build \
                     	--logger trx \
                     	/p:CollectCoverage=true \
-                        /p:CoverletOutputFormat=cobertura \
-                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml"
-		    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" ]; then
-                    	echo "File coverage.cobertura.xml tồn tại."
-                    else
-                	echo "File coverage.cobertura.xml không tồn tại!"
-                	exit 1
-            	    fi
+                        /p:CoverletOutputFormat=opencover \
+                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
 
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
