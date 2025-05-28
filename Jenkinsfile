@@ -74,7 +74,7 @@ pipeline {
                     	--logger trx \
                     	/p:CollectCoverage=true \
                         /p:CoverletOutputFormat=opencover \
-                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/"
+                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
 
             	    # Kiểm tra file coverage
             	    echo "Kiểm tra file coverage:"
