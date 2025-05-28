@@ -42,8 +42,8 @@ pipeline {
         stage('Build & Test') {
             steps {
                 sh '''
-                dotnet build --configuration Release --no-restore
-                dotnet test --no-build --verbosity normal
+                dotnet build WeatherForecast.sln --configuration Release --no-restore
+                dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj --no-build --verbosity normal
                 '''
             }
         }
@@ -56,6 +56,7 @@ pipeline {
                         /k:"WeatherForecast" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
+			/s:WeatherForecast.sln \
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
@@ -64,7 +65,7 @@ pipeline {
                         /n:"WeatherForecast" \
   			/v:"${BUILD_NUMBER}"
                     
-                    dotnet build --configuration Release --no-restore
+                    dotnet build WeatherForecast.sln --configuration Release --no-restore
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
                 }
