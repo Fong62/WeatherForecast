@@ -61,7 +61,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/coverage.opencover.xml" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
@@ -74,17 +74,16 @@ pipeline {
                     	--logger trx \
                     	/p:CollectCoverage=true \
                         /p:CoverletOutputFormat=opencover \
-                        /p:CoverletOutput="${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/"
+                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage"
 
             	    # Kiểm tra file coverage
             	    echo "Kiểm tra file coverage:"
-            	    ls -la "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/"
-            	    if [ -f "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/coverage.opencover.xml" ]; then
+            	    ls -la "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/"
+            	    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" ]; then
                 	echo "✅ File coverage tồn tại"
-                	# In ra 10 dòng đầu để debug
-                	head -n 10 "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
             	    else
                 	echo "❌ File coverage KHÔNG tồn tại!"
+			find "${env.WORKSPACE}" -name "coverage.opencover.xml"
                 	exit 1
             	    fi
 
