@@ -102,7 +102,7 @@ pipeline {
                 	cd publish
                 	zip -r ../../../${artifactName} .
                 	curl -v -u $NEXUS_USER:$NEXUS_PASS --upload-file ../../../${artifactName} \
-                    	http://192.168.1.21:8081/repository/weatherforecast-artifacts/${artifactName}
+                    	http://192.168.1.22:8081/repository/weatherforecast-artifacts/${artifactName}
                 	"""
             	     }
                 }
