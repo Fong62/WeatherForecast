@@ -68,11 +68,17 @@ pipeline {
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
 
 		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \\
-                    --no-build \\
-                    --logger trx \\
-                    /p:CollectCoverage=true \\
-                    /p:CoverletOutputFormat=cobertura \\
-                    /p:CoverletOutput=\\"${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml\\"
+                   	--no-build \\
+                    	--logger trx \\
+                    	/p:CollectCoverage=true \\
+                    	/p:CoverletOutputFormat=cobertura \\
+                    	/p:CoverletOutput=\\"${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml\\"
+		    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" ]; then
+                    	echo "File coverage.cobertura.xml tồn tại."
+                    else
+                	echo "File coverage.cobertura.xml không tồn tại!"
+                	exit 1
+            	    fi
 
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
