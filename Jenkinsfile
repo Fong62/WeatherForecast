@@ -52,6 +52,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube') {
                     sh """
+		    mkdir -p "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}"	
+	
                     dotnet sonarscanner begin \
                         /k:"WeatherForecast" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
@@ -59,7 +61,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
@@ -67,13 +69,27 @@ pipeline {
                     
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
 		    
-		    mkdir -p WeatherForecast.Tests/TestResults/${env.BUILD_ID}
 		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
                    	--no-build \
                     	--logger trx \
                     	/p:CollectCoverage=true \
                         /p:CoverletOutputFormat=opencover \
-                        /p:CoverletOutput="WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
+                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage"
+
+		    mv "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
+               		"${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
+
+            	    # Kiểm tra file coverage
+            	    echo "Kiểm tra file coverage:"
+            	    ls -la "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/"
+            	    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" ]; then
+                	echo "✅ File coverage tồn tại"
+                	# In ra 10 dòng đầu để debug
+                	head -n 10 "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
+            	    else
+                	echo "❌ File coverage KHÔNG tồn tại!"
+                	exit 1
+            	    fi
 
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
