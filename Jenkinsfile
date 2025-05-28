@@ -65,7 +65,7 @@ pipeline {
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
-  			/v:"${env.BUILD_NUMBER}"
+  			/v:"${env.BUILD_ID}"
                     
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
 		    
