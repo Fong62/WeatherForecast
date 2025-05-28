@@ -31,15 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WeatherForecast.Tests",
+              "Title": "WeatherForecast.Tests.csproj",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "RelativeDocumentMoniker": "WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "RelativeToolTip": "WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-27T21:10:31.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T21:10:31.24Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "WeatherForecast\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T21:09:50.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T21:09:50.599Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "WeatherForecast\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T12:00:20.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T12:00:20.542Z"
             }
           ]
         }

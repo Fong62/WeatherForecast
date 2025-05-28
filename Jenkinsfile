@@ -59,7 +59,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml"
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
@@ -67,12 +67,12 @@ pipeline {
                     
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
 
-		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \\
-                   	--no-build \\
-                    	--logger trx \\
-                    	/p:CollectCoverage=true \\
-                    	/p:CoverletOutputFormat=cobertura \\
-                    	/p:CoverletOutput=\\"${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml\\"
+		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
+                   	--no-build \
+                    	--logger trx \
+                    	/p:CollectCoverage=true \
+                        /p:CoverletOutputFormat=cobertura \
+                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml"
 		    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" ]; then
                     	echo "File coverage.cobertura.xml tồn tại."
                     else
