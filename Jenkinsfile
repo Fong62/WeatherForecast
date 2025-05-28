@@ -59,7 +59,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/**/coverage.cobertura.xml" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
