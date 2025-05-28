@@ -59,20 +59,21 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
+			/d:sonar.cs.opencover.reportsPaths="WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
   			/v:"${BUILD_NUMBER}"
                     
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
-
+		    
+		    mkdir -p WeatherForecast.Tests/TestResults/${env.BUILD_ID}
 		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
                    	--no-build \
                     	--logger trx \
                     	/p:CollectCoverage=true \
                         /p:CoverletOutputFormat=opencover \
-                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
+                        /p:CoverletOutput="WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
 
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
