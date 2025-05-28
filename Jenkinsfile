@@ -51,46 +51,54 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh """
-		    mkdir -p "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}"	
-	
+                    sh '''
+                    # Tạo thư mục kết quả
+                    mkdir -p "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID"
+                    
+                    # Bắt đầu phân tích SonarQube với cobertura
                     dotnet sonarscanner begin \
                         /k:"WeatherForecast" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
-			/d:sonar.scanner.scanAll=false \
-			/d:sonar.plugins.downloadOnlyRequired=true \
-			/d:sonar.language="cs" \
-			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml" \
-  			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
-			/d:sonar.css.file.suffixes=".css,.less,.scss" \
+                        /d:sonar.scanner.scanAll=false \
+                        /d:sonar.plugins.downloadOnlyRequired=true \
+                        /d:sonar.language="cs" \
+                        /d:sonar.cs.cobertura.reportsPaths="$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID/coverage.cobertura.xml" \
+                        /d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
+                        /d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
-  			/v:"${env.BUILD_ID}"
+                        /v:"$BUILD_NUMBER"
                     
+                    # Build solution
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
-		    
-		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
-                   	--no-build \
-                    	--logger trx \
-			--collect:"XPlat Code Coverage"
-
-            	    # Kiểm tra file coverage
-            	    echo "Tìm kiếm file coverage..."
-            	    COVERAGE_FILE=$(find "$WORKSPACE" -path "*/TestResults/*/coverage.cobertura.xml" | head -1)
-            	    if [ -n "$COVERAGE_FILE" ]; then
-                	echo "✅ Tìm thấy file coverage: $COVERAGE_FILE"
-			mkdir -p "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}"
-			cp "$COVERAGE_FILE" "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/coverage.cobertura.xml"
-            	    else
-                	echo "❌ File coverage KHÔNG tồn tại!"
-                	exit 1
-            	    fi
-
-		    echo "Nội dung thư mục coverage:"
-		    ls -la "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/"
-
+                    
+                    # Chạy test với coverage collector
+                    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
+                        --no-build \
+                        --logger trx \
+                        --collect:"XPlat Code Coverage"
+                    
+                    # Tìm file coverage.cobertura.xml
+                    echo "Tìm kiếm file coverage..."
+                    COVERAGE_FILE=$(find "$WORKSPACE" -path "*/TestResults/*/coverage.cobertura.xml" | head -1)
+                    
+                    if [ -n "$COVERAGE_FILE" ]; then
+                        echo "✅ Tìm thấy file coverage: $COVERAGE_FILE"
+                        mkdir -p "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID"
+                        # Sao chép file coverage.cobertura.xml
+                        cp "$COVERAGE_FILE" "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID/coverage.cobertura.xml"
+                    else
+                        echo "❌ Không tìm thấy file coverage nào!"
+                        exit 1
+                    fi
+                    
+                    # Kiểm tra file coverage
+                    echo "Nội dung thư mục coverage:"
+                    ls -la "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID/"
+                    
+                    # Kết thúc phân tích
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
-                    """
+                    '''
                 }
             }
         }
@@ -119,7 +127,7 @@ pipeline {
     	    steps {
         	withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASS')]) {
             	    script {
-                	def artifactName = "weatherforecast-${BUILD_NUMBER}.zip"
+                	def artifactName = "weatherforecast-${env.BUILD_NUMBER}.zip"
                 	sh """
                 	dotnet publish ./WeatherForecast/WeatherForecast.csproj -c Release -o ./publish
                 	cd publish
