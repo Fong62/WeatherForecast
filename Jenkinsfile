@@ -87,6 +87,7 @@ pipeline {
                         mkdir -p "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID"
                         # Sao chép file coverage.cobertura.xml
                         cp "$COVERAGE_FILE" "$WORKSPACE/WeatherForecast.Tests/TestResults/$BUILD_ID/coverage.cobertura.xml"
+			cat "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/coverage.cobertura.xml"
                     else
                         echo "❌ Không tìm thấy file coverage nào!"
                         exit 1
