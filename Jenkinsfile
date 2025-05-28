@@ -19,10 +19,8 @@ pipeline {
         stage('Restore') {
             steps {
                 script {
-                    // Đường dẫn cache trên Jenkins agent
                     def cachePath = "${env.WORKSPACE}/.nuget_packages_cache"
 
-                    // Nếu có cache thì copy lại vào thư mục .nuget/packages
                     if (fileExists(cachePath)) {
                         echo "Restore cache to .nuget/packages"
                         sh "rm -rf ~/.nuget/packages"
@@ -33,7 +31,6 @@ pipeline {
                     // Thực hiện restore nuget packages
                     sh 'dotnet restore'
                     
-                    // Sau khi restore, cập nhật lại cache
                     echo "Save .nuget/packages to cache"
                     sh "rm -rf ${cachePath}"
                     sh "mkdir -p ${cachePath}"
@@ -68,7 +65,7 @@ pipeline {
   			/v:"${BUILD_NUMBER}"
                     
                     dotnet build --configuration Release --no-restore
-                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN" || true
+                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
                 }
             }
@@ -90,6 +87,23 @@ pipeline {
         		   image.push('latest')
     			}
                     }
+                }
+            }
+        }
+	
+	stage('Publish Artifact to Nexus') {
+    	    steps {
+        	withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASS')]) {
+            	    script {
+                	def artifactName = "weatherforecast-${BUILD_NUMBER}.zip"
+                	sh """
+                	dotnet publish ./WeatherForecast/WeatherForecast.csproj -c Release -o ./publish
+                	cd publish
+                	zip -r ../../../${artifactName} .
+                	curl -v -u $NEXUS_USER:$NEXUS_PASS --upload-file ../../../${artifactName} \
+                    	http://192.168.1.21:8081/repository/weatherforecast-artifacts/${artifactName}
+                	"""
+            	     }
                 }
             }
         }
