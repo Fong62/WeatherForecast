@@ -76,7 +76,8 @@ pipeline {
                     dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
                         --no-build \
                         --logger trx \
-                        --collect:"XPlat Code Coverage"
+                        --collect:"XPlat Code Coverage" \
+			-- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
                     
                     # Tìm file coverage.cobertura.xml
                     echo "Tìm kiếm file coverage..."
