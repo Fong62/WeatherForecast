@@ -56,7 +56,7 @@ pipeline {
                         /k:"WeatherForecast" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
-			/s:WeatherForecast.sln \
+			/k:WeatherForecast.sln \
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
