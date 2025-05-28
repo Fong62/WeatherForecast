@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace WeatherForecast.Controllers;
 
@@ -16,17 +16,41 @@ public class WeatherForecastController : ControllerBase
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
+        _logger.LogInformation("WeatherForecastController constructor called.");
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        var currentDate = DateTime.Now;
+
+        var forecasts = Enumerable.Range(1, 5).Select(index =>
         {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+
+            int tempC = Random.Shared.Next(-20, 55);
+            if (tempC > 30)
+            {
+                _logger.LogWarning($"High temperature detected: {tempC}°C");
+            }
+
+            return new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(currentDate.AddDays(index)),
+                TemperatureC = tempC,
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            };
         })
         .ToArray();
+
+        if (forecasts.Any())
+        {
+            _logger.LogInformation($"Successfully generated {forecasts.Length} weather forecasts.");
+        }
+        else
+        {
+            _logger.LogWarning("No forecasts generated.");
+        }
+
+        return forecasts;
     }
 }

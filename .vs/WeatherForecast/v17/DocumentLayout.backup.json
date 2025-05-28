@@ -38,7 +38,8 @@
               "RelativeToolTip": "WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-27T21:10:31.24Z"
+              "WhenOpened": "2025-05-27T21:10:31.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -50,7 +51,8 @@
               "RelativeToolTip": "WeatherForecast\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T21:09:50.599Z"
+              "WhenOpened": "2025-05-27T21:09:50.599Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -75,7 +77,8 @@
               "RelativeToolTip": "WeatherForecast\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T12:00:20.542Z"
+              "WhenOpened": "2025-05-26T12:00:20.542Z",
+              "EditorCaption": ""
             }
           ]
         }
