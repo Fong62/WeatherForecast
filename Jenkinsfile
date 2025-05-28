@@ -56,16 +56,24 @@ pipeline {
                         /k:"WeatherForecast" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
-			/k:WeatherForecast.sln \
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.plugins.downloadOnlyRequired=true \
 			/d:sonar.language="cs" \
+			/d:sonar.cs.opencover.reportsPaths="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/**/coverage.cobertura.xml" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css,**/Migrations/**/*.cs" \
 			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"WeatherForecast" \
   			/v:"${BUILD_NUMBER}"
                     
                     dotnet build WeatherForecast.sln --configuration Release --no-restore
+
+		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \\
+                    --no-build \\
+                    --logger trx \\
+                    /p:CollectCoverage=true \\
+                    /p:CoverletOutputFormat=cobertura \\
+                    /p:CoverletOutput=\\"${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.cobertura.xml\\"
+
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
                 }
