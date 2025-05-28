@@ -72,20 +72,22 @@ pipeline {
 		    dotnet test WeatherForecast.Tests/WeatherForecast.Tests.csproj \
                    	--no-build \
                     	--logger trx \
-                    	/p:CollectCoverage=true \
-                        /p:CoverletOutputFormat=opencover \
-                        /p:CoverletOutput="${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml"
+			--collect:"XPlat Code Coverage"
 
             	    # Kiểm tra file coverage
-            	    echo "Kiểm tra file coverage:"
-            	    ls -la "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/"
-            	    if [ -f "${env.WORKSPACE}/WeatherForecast.Tests/TestResults/${env.BUILD_ID}/coverage.opencover.xml" ]; then
-                	echo "✅ File coverage tồn tại"
+            	    echo "Tìm kiếm file coverage..."
+            	    COVERAGE_FILE=$(find "$WORKSPACE" -path "*/TestResults/*/coverage.opencover.xml" | head -1)
+            	    if [ -n "$COVERAGE_FILE" ]; then
+                	echo "✅ Tìm thấy file coverage: $COVERAGE_FILE"
+			mkdir -p "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}"
+			cp "$COVERAGE_FILE" "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/coverage.opencover.xml"
             	    else
                 	echo "❌ File coverage KHÔNG tồn tại!"
-			find "${env.WORKSPACE}" -name "coverage.opencover.xml"
                 	exit 1
             	    fi
+
+		    echo "Nội dung thư mục coverage:"
+		    ls -la "${WORKSPACE}/WeatherForecast.Tests/TestResults/${BUILD_ID}/"
 
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     """
