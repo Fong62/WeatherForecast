@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\",
+  "WorkspaceRootPath": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|e:\\work\\works\\devops\\cu\u1ED1i k\u00EC\\weatherforecast\\weatherforecast.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|e:\\work\\works\\devops\\nh\u00F3m theboys_ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC quy tr\u00ECnh ci-cd\\weatherforecast\\weatherforecast.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|solutionrelative:weatherforecast.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|e:\\work\\works\\devops\\cu\u1ED1i k\u00EC\\weatherforecast\\weatherforecast\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|e:\\work\\works\\devops\\nh\u00F3m theboys_ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC quy tr\u00ECnh ci-cd\\weatherforecast\\weatherforecast\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|solutionrelative:weatherforecast\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|e:\\work\\works\\devops\\cu\u1ED1i k\u00EC\\weatherforecast\\weatherforecast.tests\\weatherforecast.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|e:\\work\\works\\devops\\nh\u00F3m theboys_ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC quy tr\u00ECnh ci-cd\\weatherforecast\\weatherforecast.tests\\weatherforecast.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C6ADFA02-3178-4178-BC10-0A66DA6998A1}|WeatherForecast.Tests\\WeatherForecast.Tests.csproj|solutionrelative:weatherforecast.tests\\weatherforecast.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|e:\\work\\works\\devops\\cu\u1ED1i k\u00EC\\weatherforecast\\weatherforecast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|e:\\work\\works\\devops\\nh\u00F3m theboys_ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC quy tr\u00ECnh ci-cd\\weatherforecast\\weatherforecast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BC7AAAB-4C21-4335-A019-0A7F3188DC7B}|WeatherForecast\\WeatherForecast.csproj|solutionrelative:weatherforecast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,9 +32,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WeatherForecast.Tests.csproj",
-              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
+              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "RelativeDocumentMoniker": "WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
-              "ToolTip": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
+              "ToolTip": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "RelativeToolTip": "WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -44,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WeatherForecast\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "WeatherForecast\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAuwCEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -56,11 +56,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
-              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\UnitTest1.cs",
+              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "WeatherForecast.Tests\\UnitTest1.cs",
-              "ToolTip": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast.Tests\\UnitTest1.cs",
+              "ToolTip": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast.Tests\\UnitTest1.cs",
               "RelativeToolTip": "WeatherForecast.Tests\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T21:09:11.738Z",
               "EditorCaption": ""
@@ -69,9 +69,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Program.cs",
+              "DocumentMoniker": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast\\Program.cs",
               "RelativeDocumentMoniker": "WeatherForecast\\Program.cs",
-              "ToolTip": "E:\\Work\\Works\\Devops\\Cu\u1ED1i k\u00EC\\WeatherForecast\\WeatherForecast\\Program.cs",
+              "ToolTip": "E:\\Work\\Works\\Devops\\Nh\u00F3m TheBoys_Ti\u1EC3u lu\u1EADn \u0111\u1ED3 \u00E1n cu\u1ED1i k\u00EC Quy tr\u00ECnh CI-CD\\WeatherForecast\\WeatherForecast\\Program.cs",
               "RelativeToolTip": "WeatherForecast\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
