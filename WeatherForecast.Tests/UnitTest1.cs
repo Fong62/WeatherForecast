@@ -32,7 +32,11 @@ namespace WeatherForecast.Tests
             {
                 Assert.InRange(forecast.TemperatureC, -20, 55);
                 Assert.False(string.IsNullOrWhiteSpace(forecast.Summary));
-                Assert.InRange(forecast.Date, DateTime.Now.AddDays(1).Date, DateTime.Now.AddDays(5).Date);
+                Assert.InRange<DateTime>(
+                    forecast.Date.ToDateTime(TimeOnly.MinValue),
+                    DateTime.Now.AddDays(1).Date,
+                    DateTime.Now.AddDays(5).Date
+                );
             }
         }
     }

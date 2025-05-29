@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
+      "projectUniqueName": "E:\\Work\\Works\\Devops\\Cuối kì\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
       "projectName": "WeatherForecast",
-      "projectPath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
+      "projectPath": "E:\\Work\\Works\\Devops\\Cuối kì\\WeatherForecast\\WeatherForecast\\WeatherForecast.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\WeatherForecast\\WeatherForecast\\obj\\",
+      "outputPath": "E:\\Work\\Works\\Devops\\Cuối kì\\WeatherForecast\\WeatherForecast\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

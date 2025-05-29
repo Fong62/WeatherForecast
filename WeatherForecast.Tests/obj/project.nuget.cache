@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7kwlqqSFRtc=",
+  "dgSpecHash": "YKIUDmB1xjo=",
   "success": true,
-  "projectFilePath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
+  "projectFilePath": "E:\\Work\\Works\\Devops\\Cuối kì\\WeatherForecast\\WeatherForecast.Tests\\WeatherForecast.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
