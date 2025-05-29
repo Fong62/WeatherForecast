@@ -71,3 +71,40 @@ E:\Work\Works\Công nghệ NET\Cuối kì\WeatherForecast\WeatherForecast\obj\De
 E:\Work\Works\Công nghệ NET\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.pdb
 E:\Work\Works\Công nghệ NET\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.genruntimeconfig.cache
 E:\Work\Works\Công nghệ NET\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\ref\WeatherForecast.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\appsettings.Development.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\appsettings.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.staticwebassets.endpoints.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.exe
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.deps.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.runtimeconfig.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\WeatherForecast.pdb
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.csproj.AssemblyReference.cache
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.GeneratedMSBuildEditorConfig.editorconfig
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.AssemblyInfoInputs.cache
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.AssemblyInfo.cs
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.csproj.CoreCompileInputs.cache
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.MvcApplicationPartsAssemblyInfo.cs
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.MvcApplicationPartsAssemblyInfo.cache
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.sourcelink.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\scopedcss\bundle\WeatherForecast.styles.css
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets.build.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets.development.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets\msbuild.WeatherForecast.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets\msbuild.WeatherForecast.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets\msbuild.build.WeatherForecast.props
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WeatherForecast.props
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WeatherForecast.props
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets.pack.json
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherF.C49A1D7B.Up2Date
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\refint\WeatherForecast.dll
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.pdb
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\WeatherForecast.genruntimeconfig.cache
+E:\Work\Works\Devops\Cuối kì\WeatherForecast\WeatherForecast\obj\Debug\net8.0\ref\WeatherForecast.dll

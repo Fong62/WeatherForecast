@@ -2,7 +2,7 @@
 
 namespace WeatherForecast.Tests
 {
-    public class FailingTest
+    public class UnitTest1
     {
         [Fact]
         public void ThisTestWillFail()
